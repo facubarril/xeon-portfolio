@@ -1,5 +1,4 @@
 import React from 'react'
-import './socials.min.css'
 import {BsLinkedin} from 'react-icons/bs'
 import {FaGithub} from 'react-icons/fa'
 import {FiDribbble} from 'react-icons/fi'

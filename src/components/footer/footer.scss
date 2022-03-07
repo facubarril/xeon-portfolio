@@ -1,0 +1,49 @@
+@import '../../vars';
+
+footer {
+    background: $primary-cV;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 7rem;
+    padding-bottom: 7rem;
+
+    .footer__logo {
+        width: 3rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .permalinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0 auto 3rem;
+    }
+
+    .socials {
+        display: flex;
+        gap: 1.2rem;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    a {
+        color: $light-c;
+    }
+
+    .footer__copyright {
+        color: $secundary-c;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 769px) {
+    .permalinks {
+        flex-direction: column;
+    }
+}
