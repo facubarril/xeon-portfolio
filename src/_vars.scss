@@ -1,0 +1,14 @@
+$bg-c       : #1f1f38;
+$bg-cV      : #2c2c6c;
+$primary-c  : #643bf7;
+$primary-cV : #541cd6;
+$secundary-c: #4db5ff;
+$primary-bg : linear-gradient(130deg, $secundary-c, $primary-cV, $primary-c);
+$light-c    : #fff;
+$light-cV   : rgba(255, 255, 255, .6);
+
+$container-w-lg : 75%;
+$container-w-md : 68%;
+$container-w-sm : 90%;
+
+$transition: all .3s ease;

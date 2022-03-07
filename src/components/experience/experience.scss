@@ -1,0 +1,70 @@
+@import '../../vars';
+
+.experience__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    > div {
+        background: $bg-cV;
+        padding: 2.4rem 5rem;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        transition: $transition;
+
+        &:hover {
+            background: transparent;
+            border-color: $primary-cV;
+            cursor: default;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $secundary-c;
+        }
+    }
+
+    .experience__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        .experience__details {
+            display: flex;
+            gap: 1rem;
+
+            .experience__details-icon {
+                margin-top: 6px;
+                color: $secundary-c;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+
+        > div {
+            width: 80%;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+
+        .experience__content {
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .experience__container {
+        gap: 1rem;
+
+        > div {
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+    }
+}
