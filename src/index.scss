@@ -77,27 +77,58 @@ img {
 .btn {
     width: max-content;
     display: inline-block;
-    color: $secundary-c;
+    color: $light-c;
+    box-shadow: $btn-shadow;
     padding: .65rem 1.65rem;
-    border-radius: 2rem;
     cursor: pointer;
-    border: 1px solid $secundary-c;
+    border: 1px solid $primary-cV;
     transition: $transition;
 
     &.btn-primary {
-        background: $primary-bg;
         color: $light-c;
         border-color: $primary-cV;
+        position: relative;
 
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1;
+            background: $bg-c;
+            transition: $transition;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1;
+            background: $primary-bg;
+            transition: $transition;
+        }
         &:hover {
-            background: linear-gradient($light-c, $light-c);
+            color: $light-c;
+            border-color: $primary-cV;
+            background: transparent;
+
+            &::after {
+                opacity: 0;
+            }
         }
     }
 
     &:hover {
-        background: $light-c;
-        color: $primary-cV;
-        border-color: transparent;
+        background: $bg-c;
+        color: $light-c;
     }
 }
 

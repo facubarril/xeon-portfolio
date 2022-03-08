@@ -44,34 +44,36 @@ export const Testimonials = () => {
         <h5>Review From Clients</h5>
         <h2>Testimonials</h2>
 
-        <Swiper
-            className="container testimonials__container mySwiper"
-            modules={[Pagination]}
-            rewind={true}
-            centeredSlides={true}
-            spaceBetween={40}
-            slidesPerView={1}
-            pagination={{
-                dynamicBullets: true,
-              }}
-        >
+        <div className="container testimonials__container">
+            <Swiper
+                className="mySwiper"
+                modules={[Pagination]}
+                rewind={true}
+                centeredSlides={true}
+                spaceBetween={40}
+                slidesPerView={1}
+                pagination={{
+                    dynamicBullets: true,
+                }}
+            >
 
-            {
-                data.map(({id, avatar, name, review}) =>{
-                    return (
-                        <SwiperSlide  key={id} className="testimonial">
-                            <div className="client__avatar">
-                                <img src={avatar} alt="Avatar" />
-                            </div>
-                            <h5 className="client__name">{name}</h5>
-                            <small className="client__review">
-                                {review}
-                            </small>
-                        </SwiperSlide>
-                    )
-                })
-            }
-        </Swiper>
+                {
+                    data.map(({id, avatar, name, review}) =>{
+                        return (
+                            <SwiperSlide  key={id} className="testimonial">
+                                <div className="client__avatar">
+                                    <img src={avatar} alt="Avatar" />
+                                </div>
+                                <h5 className="client__name">{name}</h5>
+                                <small className="client__review">
+                                    {review}
+                                </small>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+            </Swiper>
+        </div>
     </section>
   )
 }

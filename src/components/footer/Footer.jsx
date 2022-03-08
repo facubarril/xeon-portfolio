@@ -5,10 +5,10 @@ import Socials from '../socials/Socials'
 const Footer = () => {
   return (
     <footer>
-        <a href="#" className="footer__logo"><img src="https://webcreatio.net/public/logo_w.svg" alt="WebCreatio" /></a>
+        <a href="#home" className="footer__logo"><img src="https://webcreatio.net/public/logo_w.svg" alt="WebCreatio" /></a>
 
         <ul className="permalinks">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#services">Services</a></li>

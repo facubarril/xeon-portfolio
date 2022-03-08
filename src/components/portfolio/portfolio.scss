@@ -9,10 +9,9 @@
         display: flex;
         flex-flow: column nowrap;
         position: relative;
-        background: rgba($bg-cV, .5);
         padding: 1.3rem;
-        border-radius: 2rem;
-        border: 1px solid transparent;
+        border: 1px solid $primary-c;
+        box-shadow: $shadow;
         transition: $transition;
         overflow: hidden;
 
@@ -22,7 +21,10 @@
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
             background-position: bottom center;
+            background-size: contain;
+            transform: rotate(180deg);
             filter: blur(40px);
             z-index: -1;
             transition: $transition;
@@ -30,15 +32,13 @@
 
         &:hover {
             border-color: $primary-c;
-            background: transparent;
 
             .portfolio__item-bg {
-                opacity: 0;
+                opacity: 1;
             }
         }
 
         .portfolio__item-image {
-            border-radius: 1.5rem;
             overflow: hidden;
         }
 

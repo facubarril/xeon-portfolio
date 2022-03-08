@@ -3,9 +3,13 @@ $bg-cV      : #2c2c6c;
 $primary-c  : #643bf7;
 $primary-cV : #541cd6;
 $secundary-c: #4db5ff;
-$primary-bg : linear-gradient(130deg, $secundary-c, $primary-cV, $primary-c);
+
 $light-c    : #fff;
 $light-cV   : rgba(255, 255, 255, .6);
+
+$primary-bg : linear-gradient(130deg, $secundary-c, $primary-cV, $primary-c);
+$shadow     : 0 0 10px $primary-cV, inset 0 0 5px $primary-c;
+$btn-shadow : 0 0 10px rgba($primary-cV, .5), inset 0 0 5px rgba($primary-c, .5);
 
 $container-w-lg : 75%;
 $container-w-md : 68%;

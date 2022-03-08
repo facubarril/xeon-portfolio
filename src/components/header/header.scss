@@ -1,9 +1,11 @@
 @import '../../vars';
 
 header {
-    height: 100vh;
+    height: calc(100vh - 7rem);
     padding-top: 7rem;
     overflow: hidden;
+    box-sizing: content-box;
+    border-bottom: 10px solid $bg-cV;
 
     .header__container {
         text-align: center;
@@ -18,16 +20,55 @@ header {
         justify-content: center;
     }
 
+    h1 { display: none; }
+    .header__logo {
+        width: max-content;
+        height: 3rem;
+        margin: 0.8rem auto;
+        filter: brightness(1.05);
+    }
+
     .me {
-        background: linear-gradient($secundary-c 0%, transparent 90%);
-        width: 28rem;
-        height: 30rem;
+        width: 40rem;
+        height: max-content;
         position: absolute;
-        left: calc(50% - 14rem);
+        left: calc(50% - 20rem);
+        bottom: 0;
         margin-top: 4rem;
-        border-radius: 14rem 14rem 0 0;
-        overflow: hidden;
-        padding: 5rem 1.5rem 1.5rem;
+        padding: 5rem 1.5rem 0;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 150%;
+            height: 30vh;
+            right: -30%;
+            background: $primary-c;
+            position: absolute;
+            bottom: 4rem;
+            transform: rotate(155deg);
+            filter: blur(100px);
+            opacity: .2;
+            z-index: -1;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 150%;
+            height: 30vh;
+            left: -30%;
+            background: $secundary-c;
+            position: absolute;
+            bottom: 4rem;
+            transform: rotate(-155deg);
+            filter: blur(100px);
+            opacity: .2;
+            z-index: -1;
+        }
+        img {
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,.3));
+            background: radial-gradient(ellipse at bottom, rgba($secundary-c, .7), transparent 50%);
+        }
     }
 
     .scroll__down {

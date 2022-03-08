@@ -8,14 +8,24 @@
     .about__me {
         width: 100%;
         aspect-ratio: 1/1;
-        border-radius: 2rem;
-        background: linear-gradient(-45deg, transparent, $secundary-c, transparent);
         display: grid;
         place-items: center;
+        position: relative;
 
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border: 2px solid $primary-c;
+            box-shadow: $shadow;
+            z-index: -1;
+        }
         .about__me-image {
             height: 100%;
-            border-radius: 2rem;
             overflow: hidden;
             transform: rotate(-10deg);
             transition: $transition;
@@ -37,8 +47,8 @@
         gap: 1.5rem;
 
         .about__card {
-            border: 1px solid transparent;
-            border-radius: 1rem;
+            border: 1px solid $primary-cV;
+            box-shadow: $shadow;
             padding: 2rem;
             text-align: center;
             position: relative;
@@ -54,21 +64,21 @@
                 z-index: -1;
                 height: 100%;
                 width: 100%;
+                opacity: 0;
                 background: $primary-bg;
                 transition: $transition;
             }
             &:hover {
-                border-color: $primary-cV;
                 cursor: default;
 
                 &::before {
-                    opacity: 0;
+                    opacity: 1;
                 }
             }
             .about__card-icon {
                 display: inline-flex;
                 place-items: center;
-                color: $primary-c;
+                color: $secundary-c;
                 font-size: 1.4rem;
                 margin-bottom: 1rem;
                 background: $bg-c;
